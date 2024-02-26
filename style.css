@@ -1,140 +1,184 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 
+@media screen and (max-width:1075px) {
+    .content{
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width:720px) {
+    .nome{
+        font-size: 22px;
+    }
+    li.nav-link {
+        font-size: 12px;
+    }
+    .main h2{
+        font-size: 28px;
+    }
+    .main p{
+        font-size: 15px;
+    }
+    button{
+        font-size: 12px;
+    }
+    .image-code img{
+        max-width: 400px;
+    }
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', ui-sans-serif;
     color: #cfe5fc;
 }
 
 body{
     background-color: #020f24;
+    min-height: 100vh;
 }
 
-header{
-    padding: 16px 0;
-    background-color: #020f24;
-    border-bottom: 1px solid #cfe5fc;
-}
-
-header h1{
-    font-weight: bold;
-}
-
-header nav li{
-    display: inline;
-    margin-left: 16px;
-    font-size: 18px;
-}
-
-header nav li a{
+a{
     text-decoration: none;
 }
 
 .container{
-    max-width: 1280px;
+    justify-content: center;
+    display: flex;
+}
+
+.nav-container{
+    max-width: 72vw;
+    margin-top: 10vh;
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.50);
+    display: block;
+    padding: 65px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border-radius: 16px;
+}
+
+
+.nome{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+ul.nav-links{
+    margin: 0;
+    float: right;
+    display: flex;
+    list-style: none;
+    margin: 2px;
+}
+
+li.nav-link{
+    display: inline-block;
+    margin-left: 32px;
+
+}
+
+.main{
+    margin-top: 5%;
+    padding: 20px;
+    display: inline-block;
+}
+
+.main p{
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.main > h2{
+    font-size: 32px;
+    
+}
+
+.content{
+    display: flex;
     width: 100%;
-    margin: 0 auto;
 }
 
-header .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+button{
+    margin-top: 50px;
+    height: 60px;
+    width: 100%;
+    font-size: 12px;
+    color: #020f24;
+    background-color: #88f10f;
+    outline: #020f24;
+    transition: all 0.3s ease;
+    border-radius: 16px;
+    border: none;
 }
 
-.brand-list img{
-    height: 24px;
-}
-
-.brand-list li{
-    display: inline;
-    margin-right: 8px;
-}
-
-section .container{
-    display: flex;
-    margin-top: 4%;
-    align-items: left;
-    justify-content: space-between;
-}
-
-section .container > img{
-    margin-right: 20%;
-    margin-left: -10%;
+button:hover{
+    background-color: #73c219;
+    cursor: pointer;
+    outline: #020f24
 }
 
 section{
-    padding: 24px 0;
-}
-
-section h2{
-    margin-bottom: 16px;
-}
-section p{
-    margin-bottom: 16px;
-}
-
-.social-links img{
-    height: 24px;
-}
-
-.social-links li{
-    display: inline;
-    margin-right: 8px;
-}
-
-.social-links a{
-    text-decoration: none;
-}
-
-#contact .container{
+    margin-top: 15%;
+    justify-content: center;
     display: block;
+    padding: 65px;
+    background: rgba(0, 0, 0, 0.50);
+    border-radius: 16px;
+
+
 }
 
-.contact-methods{
+section p{
+    margin-top: 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    color: #73c219;
+}
+
+section p2{
+    margin-bottom: 0%;
+    display: grid;
+    justify-content: center;
+    color: #cfe5fc;
 }
 
 form input,
 form textarea,
 form button{
     display: block;
-    width: 320px;
+    color: #020f24;
+    width: 420px;
     margin-bottom: 8px;
-    padding: 28px;
-    color: #020f24;
+    margin-left: 30px;
+}
+input:focus, textarea:focus{
+    outline-color: #020f24;
 }
 
-input:focus textarea:focus{
-    outline: #020f24;
+form p{
+    margin-left: 30px;
+    justify-content: space-between;
 }
 
-form button{
-    background-color: #88f10f;
-    color: #020f24;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover{
-    background-color: #70c411;
+form img{
+    transform: translate(400px, -30px);
+    justify-content: right;
+    margin: 0%;
+    position: absolute;
 }
 
 form textarea{
     resize: none;
-}
-
-section h3{
-    margin-bottom: 16px;
+    width: 422px;
+    height: 100px;
 }
 
 footer{
-    background-color: #020f24;
-    color: #cfe5fc;
-    padding: 8px;
-    margin-bottom: 32px;
+    padding: 8px 0;
+    margin-left: 120px;
 }
